@@ -1,0 +1,422 @@
+	/* 设置滚动条的样式 */
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+	/* 滚动槽 */
+	::-webkit-scrollbar-track {
+		box-shadow: 0 0 6px rgba(0,0,0,0.3) inset;
+		-moz-box-shadow: 0 0 6px rgba(0,0,0,0.3) inset;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+	}
+	/* 滚动条滑块 */
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		background: rgba(203,160,117,0.4);
+		box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+		-moz-box-shadow:0 0 6px rgba(0,0,0,0.5) inset;
+	}
+/*----------------------------html中标签的样式-begin--------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+} 
+body {
+	width: 100%;
+	margin: 0 auto;
+	font-size: small;
+	color: rgb(24,24,24);
+	font-family: cursive,sans-serif;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/*----------------------------html中标签的样式-end-----------------------------*/
+/*----------------------------通用的自定义class-begin--------------------------*/
+/*字体旁边有两横线*/
+.mainthrough {
+	text-decoration: line-through;
+}
+
+/*每个版块前的贯穿线*/
+.through {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	margin: 1% auto; 
+	text-align: center;
+	font-family: cursive,sans-serif;
+}
+.through:before,.through:after{
+	position: absolute;
+	width: 44%;
+	top: 30%;			
+	content: " ";
+	border-top: 1px solid rgb(203, 160, 117);
+}
+.through:before {
+	left: 0;
+}
+.through:after {
+	right: 0;
+}
+/*以上为贯穿线*/
+/*----------------------------通用的自定义class-end----------------------------*/
+/*----------------------------导航栏的样式-begin-------------------------------*/
+/*Contact按钮样式*/
+#contactButton {
+	width: 80%;
+	height: 30px;
+	border-radius: 0.5em;
+	color: rgb(174,137,95);
+	background: transparent;
+	border: thin solid rgb(203,160,117); 
+}
+nav {
+	width: 90%;
+	height: 40px;
+	margin: 0 auto;
+	font-size: 1.15em;
+	line-height: 40px;
+	z-index: 2;
+}
+nav li a:link,nav li a:visited {
+	color: rgb(148,137,95);
+}
+
+/*左部分样式*/
+#leftHeader li {
+	width: 12%;
+	float: left;
+}
+#leftHeader li a {
+	padding-left: 20%;		/*修改*/
+	background: url(../images/logo2.png) no-repeat left;
+	display: block;  	
+}
+#leftHeader li a:hover {
+	font-weight: bold;
+}
+
+/*右部份样式*/
+#rightHeader li {
+	width: 12%;
+	float: right;
+}
+#rightHeader li a {
+	padding-left: 30%;			
+	display: block;   
+}
+#rightHeader li a:hover {
+	font-size: 1.2em;
+	color: rgb(24,24,24);
+}
+#iconMusic a {
+	background: url(../images/Imusic.png) no-repeat left;
+}
+#iconMusic a:hover {
+	background: url(../images/ImusicH.png) no-repeat left;
+}
+#iconBooks a {
+	background: url(../images/Ibooks.png) no-repeat left;	
+}
+#iconBooks a:hover {
+	background: url(../images/IbooksH.png) no-repeat left;
+}
+#iconTravel a {
+	background: url(../images/Itravel.png) no-repeat left;	
+}
+#iconTravel a:hover {
+	background: url(../images/ItravelH.png) no-repeat left;
+}
+#iconMore a {
+	background: url(../images/Imore.png) no-repeat left;	
+}
+#iconMore a:hover {
+	background: url(../images/ImoreH.png) no-repeat left;
+}
+/*----------------------------导航栏的样式-end----------------------------------*/
+/*----------------------------联系窗的样式-begin--------------------------------*/
+#contact {
+	position: fixed;
+	display: none;
+	left: 30%;
+	top: 25%;
+	width: 40%;
+	height: 50%;
+	text-align: center;
+	color: rgb(153,153,153);
+	background: rgb(255,255,255);
+	border: thin solid rgb(203,160,117); 	
+	z-index: 3;
+}
+#cover {
+	position: fixed;
+	top: 0;	
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	display: none;
+	background: rgb(0,0,0);
+	z-index: 2;
+}
+
+/*联系窗内小×*/
+#backmain {
+	position: absolute;
+	top: 3%;
+	right: 3%;
+}
+
+/*联系窗input样式*/
+.contactInput,#submit {
+	width: 50%;
+	height: 30px;
+	margin: 3%;
+	font-size: 1.2em;
+	color: rgb(153,153,153);
+	background: transparent;
+	border: thin solid rgb(203,160,117); 	
+}
+/*----------------------------联系窗的样式-end----------------------------------*/
+/*----------------------------主板块的样式-begin--------------------------------*/
+#main {
+	width: 90%;
+	height: 400px;
+	margin: 0 auto;
+	text-align: center;
+	color: rgb(148,137,95);
+	clear: both;
+	background: url(../images/mainback.png) no-repeat center;
+	display: table;
+}
+#main h1 {
+	font-weight: normal;
+	font-size: 3.5em;
+}
+#maintext {
+	display: table-cell;
+	vertical-align: middle;
+}
+/*----------------------------主板块的样式-end----------------------------------*/
+/*----------------------------音乐板块样式-begin--------------------------------*/
+#music {
+	width: 90%;
+	height:auto;
+	margin: 0 auto;
+	font-size: 1.1em;
+	color: rgb(126,112,62);
+}
+
+/*轮播图大板块*/
+#songs {
+	width: 90%;
+	height: 280px;
+	display: inline-block;
+	overflow: hidden;
+}
+#music ul {
+	position: relative;
+	display: inline-block;
+	width: 3360px;
+	left: 0px;
+	top: 0px;
+}
+#songs li {
+	float: left;
+}
+#selectLeft {
+	display: inline-block;
+	width: 4%;
+	cursor: pointer;
+}
+#selectRight {
+	display: inline-block;
+	width: 4%;
+	cursor: pointer;
+}
+#which {
+	height: 50px;
+	margin: 2%;
+}
+
+/*轮播焦点样式*/
+ol li {
+	display: inline-block;
+	position: relative;
+	left: 45%;
+	height: 15px;
+	width: 15px;
+	border-radius: 7.5px;
+	margin: 1%;
+	cursor: pointer;	
+	background: rgb(224,226,163);
+}
+#which1 {
+	background: rgb(223,175,148);
+}
+/*----------------------------音乐板块样式-end---------------------------------*/
+/*----------------------------书板块的样式-begin-------------------------------*/
+#books {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	display: table;
+	font-family: '微软雅黑';
+	border: thin solid rgb(195,157,136);
+	box-shadow:0 0 5px 2px rgb(195,157,136), 0 0 3px 4px rgb(248,241,210), 0 0 5px 8px rgb(248,204,204);
+}
+
+/*书本排列*/
+#books li  {
+	width: 24.6%;
+	padding-top: 1%;
+	text-align: center;
+	display: inline-block;
+}
+
+/*内容简介以及评价样式*/
+.forBooks {
+	position: relative;
+	height: 160px;
+	overflow: hidden;
+	width: 100%;
+}
+#content1,#content2,#content3,#content4 {
+	position: absolute;
+	width: 95%;
+	height: 150px;
+	color: rgb(148,137,95);
+	background: rgb(255,255,255);
+	border-top: thin solid rgb(195,157,136);
+	padding: 2%;
+	margin: 0 1%;
+}
+#evaluate1,#evaluate2,#evaluate3,#evaluate4 {
+	position: absolute;
+	top: 135px;
+	width: 95%;
+	height: 150px;
+	color: rgb(81, 83, 29);
+	background: rgb(223,175,148);
+	padding: 2%;
+	margin: 0 1%;
+}
+
+/*鼠标样式改变*/
+.forBooks h4 {
+	cursor: pointer;
+}
+/*----------------------------书板块的样式-end---------------------------------*/
+/*----------------------------旅游板块样式-begin-------------------------------*/
+#travel {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 1.1em;
+	text-align: center;
+	font-family: '微软雅黑';
+}
+.text {
+	padding: 0 10% 4% 10%;
+}
+
+/*旅游四图样式*/
+#travels {
+	margin: 0 auto;
+	display: table;
+}
+.travelcities {
+	width: 100%;
+	height: 200px;
+	display: table-row;
+	background: rgb(232,238,243);
+}
+.photo1,.photo2,.city,.message {
+	position: relative;
+	display: table-cell;
+	width: 25%;
+	vertical-align: middle;
+}
+.city {
+	line-height: 40px;
+	color: rgb(81,83,29);
+}
+.message1,.message2 {
+	width: 100%;
+	position: relative;
+	height: 95px;
+}
+.left,.right {
+	position: absolute;
+	width: 15%;
+	height: 20px;
+	top: 42%;					
+	z-index: 1;
+	cursor: pointer;
+}
+.right {
+	top: 50%;						
+	right: 0;
+}
+
+/*小箭头指向内容*/
+.photoMessage {
+	display: none;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 150px;
+	height: 150px;
+	border-radius: 60px;
+	font-size: 1.2em;
+	line-height: 30px;
+	background: rgb(241,220,220);
+	opacity: 0.9;
+}
+/*----------------------------旅游板块的样式-end-------------------------------*/
+/*----------------------------兴趣板块的样式-begin-----------------------------*/
+#interest {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	font-size: 1.1em;
+	font-family: '微软雅黑';	
+}
+#leftI {
+	width: 50%;
+	float: left;
+	padding: 0 6% 4% 6%;
+}
+#rightI {
+	width: 35%;
+	float: right;
+}
+#loading {
+	display: none;
+}
+
+/*展开收起按钮*/
+#btn1,#btn2 {
+	width: 20%;
+	height: 30px;
+	border-radius: 0.5em;
+	color: rgb(174,137,95);
+	background: transparent;
+	border: thin solid rgb(203,160,117); 
+}
+/*----------------------------兴趣板块样式-end---------------------------------*/
+/*----------------------------页尾板块的样式-begin-----------------------------*/
+footer {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	font-family: '微软雅黑';	
+	background: url(../images/footerback.jpg) no-repeat center;
+	clear: both;
+}
+/*----------------------------页尾板块的样式-end-=-----------------------------*/
